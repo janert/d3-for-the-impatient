@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <script src="d3.js"></script>
+  <script src="scales.js"></script>
+</head>
+<body>
+  <div>
+    <svg id="bins" width="600" height="200" style="background:lightgrey">
+      <g transform="translate(25,10)">
+	<text x="75" y="25" text-anchor="middle" font-family="sans-serif" font-size="14">d3.scaleQuantize()</text>
+	<line x1="0" y1="115" x2="150" y2="115" stroke="black" />
+	<line x1="0" y1="120" x2="0" y2="110" stroke="black" />
+	<line x1="150" y1="120" x2="150" y2="110" stroke="black" />
+	<rect x="19"  y="60" width="12" height="12" fill="blue"/>
+	<rect x="69"  y="60" width="12" height="12" fill="blue"/>
+	<rect x="119" y="60" width="12" height="12" fill="blue"/>
+	<line x1="50" y1="125" x2="50" y2="50" stroke="black" stroke-dasharray="3 3"/>
+	<line x1="100" y1="125" x2="100" y2="50" stroke="black" stroke-dasharray="3 3"/>
+	<text x="75" y="150" text-anchor="middle" font-family="sans-serif" font-size="14">Equally sized bins</text>
+      </g>
+
+      <g transform="translate(225,10)">
+	<text x="75" y="25" text-anchor="middle" font-family="sans-serif" font-size="14">d3.scaleThreshold()</text>
+	<line x1="0" y1="115" x2="150" y2="115" stroke="black" />
+	<line x1="0" y1="120" x2="0" y2="110" stroke="black" />
+	<line x1="150" y1="120" x2="150" y2="110" stroke="black" />	
+	<rect x="14"  y="60" width="12" height="12" fill="blue"/>
+	<rect x="49"  y="60" width="12" height="12" fill="blue"/>
+	<rect x="104" y="60" width="12" height="12" fill="blue"/>
+	<line x1="40" y1="125" x2="40" y2="50" stroke="black" stroke-dasharray="3 3"/>
+	<line x1="70" y1="125" x2="70" y2="50" stroke="black" stroke-dasharray="3 3"/>
+	<polyline points="40,115 45,130 35,130" fill="red" />
+	<polyline points="70,115 75,130 65,130" fill="red" />
+	<text x="75" y="150" text-anchor="middle" font-family="sans-serif" font-size="14">Explicit thresholds</text>
+      </g>
+
+      <g id="quantile" transform="translate(425,10)">
+	<text x="75" y="25" text-anchor="middle" font-family="sans-serif" font-size="14">d3.scaleQuantile()</text>
+	<line x1="0" y1="115" x2="150" y2="115" stroke="black" />
+	<line x1="0" y1="120" x2="0" y2="110" stroke="black" />
+	<line x1="150" y1="120" x2="150" y2="110" stroke="black" />
+	<rect id="bin1" x="19"  y="60" width="12" height="12" fill="blue"/>
+	<rect id="bin2" x="69"  y="60" width="12" height="12" fill="blue"/>
+	<rect id="bin2" x="119" y="60" width="12" height="12" fill="blue"/>
+	<line id="bd1" x1="50" y1="125" x2="50" y2="50" stroke="black" stroke-dasharray="3 3"/>
+	<line id="bd2" x1="100" y1="125" x2="100" y2="50" stroke="black" stroke-dasharray="3 3"/>
+	<text x="75" y="150" text-anchor="middle" font-family="sans-serif" font-size="14">Implicit thresholds</text>
+	<text x="75" y="170" text-anchor="middle" font-family="sans-serif" font-size="14">Equally populated bins</text>
+      </g>
+
+    </svg>
+  </div>
+
+  <div>
+    <svg id="text" width="600" height="200" style="background:lightgrey">
+      <g transform="translate(60,50)" />
+    </svg>
+  </div>
+
+  <div>
+    <svg id="ticks" width="600" height="200" style="background:lightgrey">
+    </svg>
+  </div>
+
+  <div>
+    <svg id="semilog" width="600" height="600" style="background:lightgrey" />
+  </div>
+
+  <div>
+    <svg id="timeseries" width="600" height="300" style="background:lightgrey" />
+  </div>
+  
+</body>
+</html>

@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <script src="d3.js"></script>
+  <script>
+function makeList() {
+    var vs = [ "From East", "to West,", "at Home", "is Best" ];   //<1>
+
+    d3.select( "body" )                                           //<2>
+        .append( "ul" ).selectAll( "li" )                         //<3>
+        .data(vs).enter()                                         //<4>
+        .append("li").text( d => d );                             //<5>
+}
+  </script>
+</head>
+  
+<body onload="makeList()" />
+</html>

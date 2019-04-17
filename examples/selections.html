@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <script src="d3.js"></script>
+  <script src="selections.js"></script>
+</head>
+<body>
+  <div>
+    <svg id="key" width="300" height="155" style="background: lightgrey"></svg>
+  </div>
+
+  <ul id="sort" style="height: 100px; width: 300px; background: lightgrey">
+  </ul>
+
+  <div>
+    <svg id="update" width="300" height="150" style="background: lightgrey"></svg>
+  </div>
+
+  <!-- rgb(179,230,255) == hsl(200, 100%, 85%) -->
+  
+  <div>
+    <svg id="bind1" width="650" height="190" style="background: lightgrey">
+
+      <g transform="translate(150,0)">      
+      <g transform="translate(50,0)">      
+      <g transform="translate(10,10)">
+	<rect x="4" y="24" width="72" height="140" rx="30"
+	      fill="rgb(179,230,255)" stroke="blue" />
+	<g fill="none" stroke="black">
+	  <rect x="0" y="0" width="80" height="170" rx="0" />	
+	  <rect x="8" y="28" width="64" height="24" />
+	  <rect x="8" y="64" width="64" height="24" />
+	  <rect x="8" y="100" width="64" height="24" />
+	  <rect x="8" y="136" width="64" height="24" />
+	</g>
+
+	<g fill="black" stroke="none" font-family="sans-serif">
+	  <text x="40"y="20"font-size="14" text-anchor="middle">Selection</text>
+	  <text x="12" y="45" font-size="12" text-anchor="start">Node</text>
+	  <text x="12" y="81" font-size="12" text-anchor="start">Node</text>
+	  <text x="12" y="117" font-size="12" text-anchor="start">Node</text>
+	  <text x="12" y="153" font-size="12" text-anchor="start">Node</text>
+	</g>
+      </g>
+
+      <g transform="translate(160,10)">
+	<g fill="none" stroke="black">
+	  <rect x="0" y="0" width="80" height="170" ry="0" />	
+	  <rect x="8" y="28" width="64" height="24" />
+	  <rect x="8" y="64" width="64" height="24" />
+	  <rect x="8" y="100" width="64" height="24" />
+	  <rect x="8" y="136" width="64" height="24" />
+	</g>
+
+	<g fill="black" stroke="none" font-family="sans-serif">
+	  <text x="40"y="20"font-size="14" text-anchor="middle">Data</text>
+	  <text x="12" y="45" font-size="12" text-anchor="start">Item</text>
+	  <text x="12" y="81" font-size="12" text-anchor="start">Item</text>
+	  <text x="12" y="117" font-size="12" text-anchor="start">Item</text>
+	  <text x="12" y="153" font-size="12" text-anchor="start">Item</text>
+	</g>
+      </g>
+
+      <g stroke="blue" fill="blue">
+	<path d="M165,50 L65,50 l10,-3 l0,6   l-10,-3" />
+	<path d="M165,86 L65,86 l10,-3 l0,6   l-10,-3" />
+	<path d="M165,122 L65,122 l10,-3 l0,6 l-10,-3" />
+	<path d="M165,158 L65,158 l10,-3 l0,6 l-10,-3" />
+      </g>
+      </g>
+
+      <g font-family="monospace" font-size="12" font-weight="bold">
+	<text x="10" y="115" fill="blue">data()</text>
+	<path d="M10,120 L50,120 L65,107" stroke="blue" fill="none" />
+      </g>
+      </g>
+    </svg>
+  </div>
+
+  <div>
+    <svg id="bind2" width="300" height="190" style="background: lightgrey">
+
+      <g transform="translate(50,0)">      
+      <g transform="translate(10,10)">
+	<rect x="4" y="24" width="72" height="68" rx="20"
+	      fill="rgb(179,230,255)" stroke="blue" />
+	<rect x="4" y="96" width="72" height="68" rx="20"
+	      fill="lightgreen" stroke="green" />
+	
+	<g fill="none" stroke="black">
+	  <rect x="0" y="0" width="80" height="170" rx="0" />	
+	  <rect x="8" y="28" width="64" height="24" />
+	  <rect x="8" y="64" width="64" height="24" />
+	  <rect x="8" y="100" width="64" height="24" />
+	  <rect x="8" y="136" width="64" height="24" />
+	</g>
+
+	<g fill="black" stroke="none" font-family="sans-serif">
+	  <text x="40"y="20"font-size="14" text-anchor="middle">Selection</text>
+	  <text x="12" y="45" font-size="12" text-anchor="start">Node</text>
+	  <text x="12" y="81" font-size="12" text-anchor="start">Node</text>
+	  <text x="12" y="117" font-size="12" text-anchor="start"></text>
+	  <text x="12" y="153" font-size="12" text-anchor="start"></text>
+	</g>
+      </g>
+
+      <g transform="translate(160,10)">
+	<g fill="none" stroke="black">
+	  <rect x="0" y="0" width="80" height="170" ry="0" />	
+	  <rect x="8" y="28" width="64" height="24" />
+	  <rect x="8" y="64" width="64" height="24" />
+	  <rect x="8" y="100" width="64" height="24" />
+	  <rect x="8" y="136" width="64" height="24" />
+	</g>
+
+	<g fill="black" stroke="none" font-family="sans-serif">
+	  <text x="40"y="20"font-size="14" text-anchor="middle">Data</text>
+	  <text x="12" y="45" font-size="12" text-anchor="start">Item</text>
+	  <text x="12" y="81" font-size="12" text-anchor="start">Item</text>
+	  <text x="12" y="117" font-size="12" text-anchor="start">Item</text>
+	  <text x="12" y="153" font-size="12" text-anchor="start">Item</text>
+	</g>
+      </g>
+
+      <g stroke="blue" fill="blue">
+	<path d="M165,50 L65,50 l10,-3 l0,6 l-10,-3" />
+	<path d="M165,86 L65,86 l10,-3 l0,6 l-10,-3" />
+	<path d="M165,122 L65,122 l10,-3 l0,6 l-10,-3" />
+	<path d="M165,158 L65,158 l10,-3 l0,6 l-10,-3" />
+      </g>
+      </g>
+
+      <g font-family="monospace" font-size="12" font-weight="bold">
+	<text x="10" y="79" fill="blue">data()</text>
+	<path d="M10,84 L50,84 L65,71" stroke="blue" fill="none" />
+
+	<text x="5" y="151" fill="green">enter()</text>
+	<path d="M5,156 L55,156 L65,143" stroke="green" fill="none" />
+      </g>
+      
+    </svg>
+  </div>
+
+  <div>
+    <svg id="bind3" width="350" height="190" style="background: lightgrey">
+      <g transform="translate(50,0)">
+      <g transform="translate(50,0)">
+      <g transform="translate(10,10)">
+	<rect x="4" y="24" width="72" height="68" rx="20"
+	      fill="rgb(179,230,255)" stroke="blue" />
+	<rect x="4" y="96" width="72" height="68" rx="20"
+	      fill="pink" stroke="red" />
+
+	<g fill="none" stroke="black">
+	  <rect x="0" y="0" width="80" height="170" rx="0" />	
+	  <rect x="8" y="28" width="64" height="24" />
+	  <rect x="8" y="64" width="64" height="24" />
+	  <rect x="8" y="100" width="64" height="24" />
+	  <rect x="8" y="136" width="64" height="24" />
+	</g>
+
+	<g fill="black" stroke="none" font-family="sans-serif">
+	  <text x="40"y="20"font-size="14" text-anchor="middle">Selection</text>
+	  <text x="12" y="45" font-size="12" text-anchor="start">Node</text>
+	  <text x="12" y="81" font-size="12" text-anchor="start">Node</text>
+	  <text x="12" y="117" font-size="12" text-anchor="start">Node</text>
+	  <text x="12" y="153" font-size="12" text-anchor="start">Node</text>
+	</g>
+      </g>
+
+      <g transform="translate(160,10)">
+	<g fill="none" stroke="black">
+	  <rect x="0" y="0" width="80" height="170" ry="0" />	
+	  <rect x="8" y="28" width="64" height="24" />
+	  <rect x="8" y="64" width="64" height="24" />
+	  <rect x="8" y="100" width="64" height="24" visibility="hidden"/>
+	  <rect x="8" y="136" width="64" height="24" visibility="hidden"/>
+	</g>
+
+	<g fill="black" stroke="none" font-family="sans-serif">
+	  <text x="40"y="20"font-size="14" text-anchor="middle">Data</text>
+	  <text x="12" y="45" font-size="12" text-anchor="start">Item</text>
+	  <text x="12" y="81" font-size="12" text-anchor="start">Item</text>
+	  <text x="12" y="117" font-size="12" text-anchor="start"></text>
+	  <text x="12" y="153" font-size="12" text-anchor="start"></text>
+	</g>
+      </g>
+
+      <g stroke="blue" fill="blue">
+	<path d="M165,50 L65,50 l10,-3 l0,6 l-10,-3" />
+	<path d="M165,86 L65,86 l10,-3 l0,6 l-10,-3" />
+	<path d="M165,122 L65,122 l10,-3 l0,6 l-10,-3" visibility="hidden"/>
+	<path d="M165,158 L65,158 l10,-3 l0,6 l-10,-3" visibility="hidden"/>
+      </g>
+      </g>
+
+      <g font-family="monospace" font-size="12" font-weight="bold">
+	<text x="10" y="79" fill="blue">data()</text>
+	<path d="M10,84 L50,84 L65,71" stroke="blue" fill="none" />
+
+	<text x="10" y="151" fill="red">exit()</text>
+	<path d="M10,156 L50,156 L65,143" stroke="red" fill="none" />
+      </g>
+      </g>
+      
+    </svg>
+  </div>
+
+  <div>
+    <svg id="bind4" width="300" height="190" style="background: lightgrey">
+
+      <g transform="translate(50,0)">
+      <g transform="translate(10,10)">
+	<rect x="4" y="24" width="82" height="32" rx="30"
+	      fill="pink" stroke="red" />
+	<rect x="4" y="60" width="82" height="68" rx="20"
+	      fill="rgb(179,230,255)" stroke="blue" />
+	<rect x="4" y="132" width="82" height="32" rx="30"
+	      fill="lightgreen" stroke="green" />
+	
+	<g fill="none" stroke="black">
+	  <rect x="0" y="0" width="90" height="170" rx="0" />	
+	  <rect x="8" y="28" width="74" height="24" />
+	  <rect x="8" y="64" width="74" height="24" />
+	  <rect x="8" y="100" width="74" height="24" />
+	  <rect x="8" y="136" width="74" height="24" />
+	</g>
+
+	<g fill="black" stroke="none" font-family="sans-serif">
+	  <text x="45"y="20"font-size="14" text-anchor="middle">Selection</text>
+	  <text x="12" y="45" font-size="12" text-anchor="start">Node 'a'</text>
+	  <text x="12" y="81" font-size="12" text-anchor="start">Node 'b'</text>
+	  <text x="12" y="117" font-size="12" text-anchor="start">Node 'c'</text>
+	  <text x="12" y="153" font-size="12" text-anchor="start"></text>
+	</g>
+      </g>
+
+      <g transform="translate(150,10)">
+	<g fill="none" stroke="black">
+	  <rect x="0" y="0" width="90" height="170" ry="0" />	
+	  <rect x="8" y="28" width="74" height="24" />
+	  <rect x="8" y="64" width="74" height="24" />
+	  <rect x="8" y="100" width="74" height="24" />
+	  <rect x="8" y="136" width="74" height="24" visibility="hidden"/>
+	</g>
+
+	<g fill="black" stroke="none" font-family="sans-serif">
+	  <text x="45"y="20"font-size="14" text-anchor="middle">Data</text>
+	  <text x="12" y="45" font-size="12" text-anchor="start">Item 'z'</text>
+	  <text x="12" y="81" font-size="12" text-anchor="start">Item 'c'</text>
+	  <text x="12" y="117" font-size="12" text-anchor="start">Item 'b'</text
+	  <text x="12" y="153" font-size="12" text-anchor="start"></text>
+	</g>
+      </g>
+
+      <g stroke="blue" fill="blue">
+	<path d="M155,50 C100,50 160,158 77,158.5" fill="none"/>
+	<path d="M75,158 l10,-3 l0,6 Z" />
+	<path d="M155,86 L76,123"/>
+	<path d="M75,123 l10,-3 l0,6Z" transform="rotate(-22,76,123)"/>
+	<path d="M155,122 L76,86"/>
+	<path d="M76,86 l10,-3 l0,6Z" transform="rotate(22,76,86)"/>
+	<path d="M155,158 L75,158 l10,-3 l0,6 l-10,-3" visibility="hidden" />
+      </g>
+      </g>
+
+      <g font-family="monospace" font-size="12" font-weight="bold">
+	<text x="10" y="115" fill="blue">data()</text>
+	<path d="M10,120 L50,120 L65,107" stroke="blue" fill="none" />
+
+	<text x="10" y="60" fill="red">exit()</text>
+	<path d="M10,65 L50,65 L65,52" stroke="red" fill="none" />
+	
+	<text x="5" y="168" fill="green">enter()</text>
+	<path d="M5,173 L55,173 L65,160" stroke="green" fill="none" />
+      </g>
+    </svg>
+  </div>
+
+  <div>
+    <svg id="bind5" width="350" height="190" style="background: lightgrey">
+
+      <g transform="translate(50,0)">
+      <g transform="translate(50,0)">	
+      <g transform="translate(10,10)">
+	<rect x="4" y="24" width="82" height="32" rx="20"
+	      fill="rgb(179,230,255)" stroke="blue" />
+	<rect x="4" y="60" width="82" height="32" rx="20"
+	      fill="pink" stroke="red" />
+	<rect x="4" y="96" width="82" height="32" rx="20"
+	      fill="rgb(179,230,255)" stroke="blue" />
+	<rect x="4" y="132" width="82" height="32" rx="20"
+	      fill="lightgreen" stroke="green" />
+
+	
+	<g fill="none" stroke="black">
+	  <rect x="0" y="0" width="90" height="170" rx="0" />	
+	  <rect x="8" y="28" width="74" height="24" />
+	  <rect x="8" y="64" width="74" height="24" />
+	  <rect x="8" y="100" width="74" height="24" />
+	  <rect x="8" y="136" width="74" height="24" />
+	</g>
+
+	<g fill="black" stroke="none" font-family="sans-serif">
+	  <text x="45"y="20"font-size="14" text-anchor="middle">Selection</text>
+	  <text x="12" y="45" font-size="12" text-anchor="start">Node 'a'</text>
+	  <text x="12" y="81" font-size="12" text-anchor="start">Node 'a'</text>
+	  <text x="12" y="117" font-size="12" text-anchor="start">Node 'b'</text>
+	  <text x="12" y="153" font-size="12" text-anchor="start"></text>
+	</g>
+      </g>
+
+      <g transform="translate(150,10)">
+	<g fill="none" stroke="black">
+	  <rect x="0" y="0" width="90" height="170" ry="0" />	
+	  <rect x="8" y="28" width="74" height="24" />
+	  <rect x="8" y="64" width="74" height="24" />
+	  <rect x="8" y="100" width="74" height="24" />
+	  <rect x="8" y="136" width="74" height="24" visibility="hidden"/>
+	</g>
+
+	<g fill="black" stroke="none" font-family="sans-serif">
+	  <text x="45"y="20"font-size="14" text-anchor="middle">Data</text>
+	  <text x="12" y="45" font-size="12" text-anchor="start">Item 'a'</text>
+	  <text x="12" y="81" font-size="12" text-anchor="start">Item 'b'</text>
+	  <text x="12" y="117" font-size="12" text-anchor="start">Item 'b'</text>
+	  <text x="12" y="153" font-size="12" text-anchor="start"></text>
+	</g>
+      </g>
+
+      <g stroke="blue" fill="blue">
+	<path d="M155,50 L75,50 l10,-3 l0,6 l-10,-3" />
+	<path d="M155,86 L76,123" />
+	<path d="M76,123 l10,-3 l0,6 Z" transform="rotate(-22,76,123)" />
+	<path d="M155,122 L76,159" />
+	<path d="M76,159 l10,-3 l0,6 Z" transform="rotate(-22,76,159)" />
+	<path d="M155,158 L75,158 l10,-3 l0,6 l-10,-3" visibility="hidden"/>
+      </g>
+      </g>
+
+      <g font-family="monospace" font-size="12" font-weight="bold">
+	<text x="10" y="60" fill="blue">data()</text>
+	<path d="M10,65 L50,65 L65,52" stroke="blue" fill="none" />
+
+	<text x="10" y="96" fill="red">exit()</text>
+	<path d="M10,101 L50,101 L65,88" stroke="red" fill="none" />
+
+	<text x="10" y="132" fill="blue">data()</text>
+	<path d="M10,135 L50,135 L65,122" stroke="blue" fill="none" />
+	
+	<text x="5" y="168" fill="green">enter()</text>
+	<path d="M5,173 L55,173 L65,160" stroke="green" fill="none" />
+      </g>
+      </g>      
+    </svg>
+  </div>
+
+  
+</body>
+</html>

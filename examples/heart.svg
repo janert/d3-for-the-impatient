@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:svg="http://www.w3.org/2000/svg">
+  <defs>
+    <g id="heart">
+      <path d="M0 -3 A3 6.6 -35 1 0 0 6 A3 6.6 35 1 0 0 -3Z" />
+    </g>
+  </defs>
+</svg>

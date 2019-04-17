@@ -1,0 +1,35 @@
+{ "name": "root", "size": 0, "kids": [
+    { "name": "bin", "size": 3, "kids": [] },
+    { "name": "boot", "size": 1, "kids": [] },
+    { "name": "dev", "size": 1, "kids": [] },
+    { "name": "home", "size": 0, "kids": [
+        { "name": "alice", "size": 5, "kids": [
+            { "name": "mail", "size": 3, "kids": [] },
+            { "name": "img", "size": 1, "kids": [
+                { "name": "color", "size": 8, "kids": [] },
+                { "name": "bw", "size": 3, "kids": [] }
+            ] },
+            { "name": "files", "size": 4, "kids": [] }
+        ] },
+        { "name": "eve", "size": 1, "kids": [
+            { "name": "spy", "size": 2, "kids": [] }
+        ] },	
+        { "name": "bob", "size": 3, "kids": [
+            { "name": "mail", "size": 4, "kids": [] },
+            { "name": "docs", "size": 7, "kids": [] },
+            { "name": "src", "size": 5, "kids": [] }
+        ] }
+    ] },
+    { "name": "lib", "size": 9, "kids": [] },
+    { "name": "usr", "size": 0, "kids": [
+        { "name": "bin", "size": 3, "kids": [] },
+        { "name": "include", "size": 6, "kids": [] },
+        { "name": "lib", "size": 9, "kids": [] },
+        { "name": "local", "size": 7, "kids": [
+            { "name": "bin", "size": 2, "kids": [] },
+            { "name": "lib", "size": 3, "kids": [] },
+            { "name": "share", "size": 3, "kids": [] }
+        ] },
+        { "name": "share", "size": 4, "kids": [] }
+    ] }
+] }
