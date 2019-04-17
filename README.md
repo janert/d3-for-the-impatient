@@ -38,6 +38,7 @@ install and run a webserver using:
 ```
 npm install -g http-server
 http-server ./project -p 8080
+```
 
 Because they are part of its standard distribution, Python's webserver
 modules are ubiquitious, but can be quite slow, even for development
@@ -46,6 +47,7 @@ work (the `-d` argument requires Python 3.7 or later):
 ```
 python -m http.server -d ./project 8080	 # Python 3
 python -m SimpleHTTPServer 8080          # Python 2: current dir
+```
 
 The _busybox_ set of tools should be installed on all Debian-derived
 Linux distributions by default. Its built-in webserver works well and
@@ -53,6 +55,7 @@ is very fast:
 
 ```
 busybox httpd -h ./project -p 8080
+```
 
 In all these examples (except Python 2), the server will be serving files
 from the _project/_ directory below the current directory, and listen
