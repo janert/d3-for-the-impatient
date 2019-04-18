@@ -3,8 +3,6 @@
 Examples and code for the book _D3 for the Impatient_ by Philipp K. Janert
 (O'Reilly, 2019).
 
-![Cover: D3 for the Impatient](d3cover-small.png)
-
 ## Description
 
 This repository contains the source code and other files necessary to run
