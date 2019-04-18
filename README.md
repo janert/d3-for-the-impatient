@@ -3,7 +3,7 @@
 Examples and code for the book _D3 for the Impatient_ by Philipp K. Janert
 (O'Reilly, 2019).
 
-![Cover: D3 for the Impatient](/d3cover-small.png)
+![Cover: D3 for the Impatient](/blob/master/d3cover-small.png)
 
 ## Description
 
@@ -32,14 +32,14 @@ To download the examples, you may clone the repository:
 git clone git://github.com/janert/d3-for-the-impatient.git
 ```
 
-Alternatively, download the all the files as zipped archive using from:
+Alternatively, download all the files as zipped archive from:
 
 ```
 https://github.com/janert/d3-for-the-impatient/archive/master.zip
 ```
 
 (or using the green button in the top right corner of this page), then
-unpack it using:
+unpack them using:
 
 ```
 unzip d3-for-the-impatient-master.zip
