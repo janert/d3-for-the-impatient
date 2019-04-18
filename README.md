@@ -51,32 +51,36 @@ many programming languages include ready-to-use web server modules as well.
 (See https://gist.github.com/willurd/5720255 for an extensive list of
 low-configuration web servers.)
 
+Here are some examples of popular, lightweight web servers. By default,
+they all serve files from the directory they were started from, hence
+_change into the `examples` directory` before starting the server_.
+
 - The D3 website recommends _http-server_, which is a Node.js package. If you
   have the Node runtime and the _npm_ package manager installed, you can 
   install and run a web server using:
    ```
    npm install -g http-server
-   http-server ./project -p 8080
+   http-server -p 8080
    ```
 
 - Because they are part of its standard distribution, Python's web server
-modules are ubiquitious, but can be quite slow, even for development
-work (the `-d` argument requires Python 3.7 or later):
-```
-python -m http.server -d ./project 8080	 # Python 3
-python -m SimpleHTTPServer 8080          # Python 2: current dir
-```
+  modules are ubiquitious, but can be quite slow, even for development work:
+  ```
+  python -m http.server -d 8080		   # Python 3
+  python -m SimpleHTTPServer 8080          # Python 2
+  ```
 
 - The _busybox_ set of tools should be installed on all Debian-derived
-Linux distributions by default. Its built-in web server works well and
-is very fast:
-```
-busybox httpd -h ./project -p 8080
-```
+  Linux distributions by default. Its built-in web server works well and
+  is very fast:
+  ```
+  busybox httpd -p 8080
+  ```
 
-In all these examples (except Python 2), the server will be serving files
-from the _project/_ directory below the current directory, and listen
-on port 8080. The files in the server directory will be available at
+In all these examples, the server will be serving files from the directory
+that it was started in and listen on port 8080. (Most of the servers allow
+to specify a different directory on the command line; see the server-specific
+documentation.) The files in the server directory will be available at
 http://localhost:8080.
 
 ### Running the Examples
