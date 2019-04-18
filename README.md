@@ -32,7 +32,7 @@ git clone git://github.com/janert/d3-for-the-impatient.git
 ```
 
 Alternatively, download the `d3-for-the-impatient-master.zip` file
-using the green button in the top right corner of this page, then
+(using the green button in the top right corner of this page), then
 unpack it using:
 
 ```
@@ -53,7 +53,7 @@ low-configuration web servers.)
 
 Here are some examples of popular, lightweight web servers. By default,
 they all serve files from the directory they were started from, hence
-_change into the `examples` directory` before starting the server_.
+_change into the `examples` directory before starting the server_.
 
 - The D3 website recommends _http-server_, which is a Node.js package. If you
   have the Node runtime and the _npm_ package manager installed, you can 
@@ -66,7 +66,7 @@ _change into the `examples` directory` before starting the server_.
 - Because they are part of its standard distribution, Python's web server
   modules are ubiquitious, but can be quite slow, even for development work:
   ```
-  python -m http.server -d 8080		   # Python 3
+  python -m http.server -d 8080            # Python 3
   python -m SimpleHTTPServer 8080          # Python 2
   ```
 
