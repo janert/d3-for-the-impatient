@@ -3,7 +3,7 @@
 Examples and code for the book _D3 for the Impatient_ by Philipp K. Janert
 (O'Reilly, 2019).
 
-![Cover: D3 for the Impatient](/blob/master/d3cover-small.png)
+![Cover: D3 for the Impatient](d3cover-small.png)
 
 ## Description
 
