@@ -52,12 +52,12 @@ many programming languages include ready-to-use web server modules as well.
 low-configuration web servers.)
 
 - The D3 website recommends _http-server_, which is a Node.js package. If you
-have the Node runtime and the _npm_ package manager installed, you can 
-install and run a web server using:
-```
-npm install -g http-server
-http-server ./project -p 8080
-```
+  have the Node runtime and the _npm_ package manager installed, you can 
+  install and run a web server using:
+   ```
+   npm install -g http-server
+   http-server ./project -p 8080
+   ```
 
 - Because they are part of its standard distribution, Python's web server
 modules are ubiquitious, but can be quite slow, even for development
