@@ -98,6 +98,20 @@ page per chapter. (The exception is Chapter 2, where there is a separate
 set of files for each example.)
 
 
+## Contributing
+
+These files are intended to make it easier to learn D3, so feel free to
+modify them for your own purposes as you wish. Let me know if you have
+questions or suggestions.
+
+- Jane Pong is maintaining a [version organized by
+  example](https://github.com/officeofjane/d3-for-the-impatient-examples)
+  (instead of by chapter).
+
+- Giuseppe Verni is working on an [npm-based
+  installer](https://github.com/gverni/d3-for-the-impatient).
+
+
 ## Resources
 
 - Catalog Page on O'Reilly: http://shop.oreilly.com/product/0636920224341.do
