@@ -1,0 +1,28 @@
+{
+  "name": "gverni-d3-for-the-impatient",
+  "version": "1.0.0",
+  "description": "Fork for the D3 for the Impatient repository",
+  "main": "index.js",
+  "scripts": {
+    "start": "node_modules/.bin/browser-sync start --server \"examples\" --files \"examples\""
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/gverni/d3-for-the-impatient.git"
+  },
+  "keywords": [
+    "D3",
+    "npm",
+    "yarn",
+    "examples"
+  ],
+  "author": "gverni, janert",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/gverni/d3-for-the-impatient/issues"
+  },
+  "homepage": "https://github.com/gverni/d3-for-the-impatient#readme",
+  "dependencies": {
+    "browser-sync": "^2.26.5"
+  }
+}
