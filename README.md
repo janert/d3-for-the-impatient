@@ -11,12 +11,16 @@ This repository contains the source code and other files necessary to run
 the examples in the book. The repository also contains the code that was
 used to generate the figures in the book.
 
+## View Examples and Figures
+
+You can view all examples and figures [here](https://janert.github.io/d3-for-the-impatient-examples/).
+
 
 ## Installation
 
-To run the examples, you need to download the files in the `examples`
-directory. You will also need to run a local web server to work with
-D3 and to run the examples.
+To run the examples yourself (in order to play with and modify them), you
+need to download the files in the `examples` directory. You will also need
+to run a local web server to work with D3 and to run the examples.
 
 To make running the examples as easy as possible, a version of the D3
 library itself is included with the other files. All examples
@@ -108,7 +112,7 @@ questions or suggestions.
   example](https://github.com/officeofjane/d3-for-the-impatient-examples)
   (instead of by chapter).
 
-- Giuseppe Verni is working on an [npm-based
+- Giuseppe Verni has created an [npm-based
   installer](https://github.com/gverni/d3-for-the-impatient).
 
 
