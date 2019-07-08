@@ -76,7 +76,7 @@ _change into the `examples` directory before starting the server_.
 - Because they are part of its standard distribution, Python's web server
   modules are ubiquitious, but can be quite slow, even for development work:
   ```
-  python -m http.server -d 8080            # Python 3
+  python -m http.server 8080               # Python 3
   python -m SimpleHTTPServer 8080          # Python 2
   ```
 
