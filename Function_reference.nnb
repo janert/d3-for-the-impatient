@@ -1,0 +1,11 @@
+{
+    "cells": [
+        {
+            "language": "typescript",
+            "source": [
+                "//using the function to initiate the scales\r\n\r\nvar makeScale = function( accessor, range ) {         //<3>\r\n    return d3.scaleLinear()\r\n        .domain( d3.extent( data, accessor ) )\r\n        .range( range ).nice();                           \r\n}\r\nvar scX  = makeScale( d => d[\"A\"],  [0, pxX] );\r\nvar scY1 = makeScale( d => d[\"B\"], [pxY, 0] );\r\nvar scY2 = makeScale( d => d[\"C\"], [pxY, 0] );"
+            ],
+            "outputs": []
+        }
+    ]
+}
